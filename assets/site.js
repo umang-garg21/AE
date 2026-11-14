@@ -46,7 +46,6 @@
         <p>Machines, designed by physics. We are building the engine that designs hardware end to end, so it can move at the speed of software.</p></div>
       <div class="f-col f-c1 mono"><span class="h">Product</span><a href="technology.html">Technology</a><a href="applications.html">Applications</a><a href="progress.html">Progress</a></div>
       <div class="f-col f-c2 mono"><span class="h">Company</span><a href="company.html">About</a><a href="company.html#roles">Open roles</a><a href="contact.html">Contact</a></div>
-      <div class="f-credit">Hero and page footage: NASA, public domain. Use does not imply NASA endorsement.<br>3D model and control-room values are illustrative.</div>
       <div class="f-bottom mono"><span>© ${new Date().getFullYear()} ${CONFIG.brand} · ${CONFIG.brandLong}</span>${CONFIG.email ? `<a href="mailto:${CONFIG.email}">${CONFIG.email}</a>` : '<a href="contact.html">Contact</a>'}</div>
     </div></footer>`;
     document.querySelectorAll('.brand').forEach(e => e.textContent = CONFIG.brand);
