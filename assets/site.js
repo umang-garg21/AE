@@ -112,6 +112,23 @@
         cc.stroke(); if (rev > 0) { const X = rev / n * w, v = b + (a - b) * Math.exp(-rev / 15); cc.fillStyle = col; cc.beginPath(); cc.arc(X, y(v), 3 * DPR, 0, 7); cc.fill(); } }); });
   }
 
+
+  // Light YouTube embeds: thumbnail first, the player loads only on play or chapter click
+  function videos() {
+    document.querySelectorAll('.yt').forEach(box => {
+      const id = box.dataset.id;
+      const play = (t = 0) => {
+        let f = box.querySelector('iframe');
+        const src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1&start=${t}`;
+        if (!f) { f = document.createElement('iframe'); f.title = 'Live design run'; f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; f.allowFullscreen = true; box.appendChild(f); }
+        f.src = src; box.classList.add('playing');
+      };
+      box.addEventListener('click', e => { if (!box.classList.contains('playing')) play(0); });
+      const aside = box.parentElement.querySelector('.chapters');
+      aside && aside.querySelectorAll('button[data-t]').forEach(b => b.addEventListener('click', () => { play(+b.dataset.t); if (box.getBoundingClientRect().top < 0) box.scrollIntoView({ behavior: 'smooth', block: 'center' }); }));
+    });
+  }
+
   /* ---------- boot after the page body exists ---------- */
   function boot() {
     shell();
@@ -138,6 +155,7 @@
     document.documentElement.classList.add('io');
     document.querySelectorAll('canvas[data-viz]').forEach(c => viz(c, c.dataset.viz));
     controlRoom();
+    videos();
   }
   window.Site = { CONFIG, PAGES, page, fit, whileVisible, heat, rad, viz, DPR, reduce };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
