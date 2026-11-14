@@ -454,3 +454,6 @@ footer .f-credit{grid-column:10/13}
 .btn.soon{opacity:.55;cursor:default;pointer-events:none}
 @media (max-width:640px){.nav .logo-sub{display:none}}
 .meta{text-shadow:0 1px 14px rgba(0,0,0,.85),0 0 2px rgba(0,0,0,.6)}
+.logo{white-space:nowrap}
+@media (max-width:1240px) and (min-width:1081px){.links a{padding:10px 10px}}
+
