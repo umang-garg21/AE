@@ -4,7 +4,7 @@
   const CONFIG = window.CONFIG = {
     brand: 'AE',                     // company mark, everywhere
     brandLong: 'Automated Engineering',
-    email: 'umang@ucsb.edu',         // contact address, everywhere
+    email: 'automatedengineering.ae@gmail.com', // contact address, everywhere
     scene3dSeconds: 14               // home hero: time the live 3D scene stays up
   };
   // Site map, in reading order. Each page ends by handing off to the next one.
