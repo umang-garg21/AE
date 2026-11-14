@@ -457,3 +457,32 @@ footer .f-credit{grid-column:10/13}
 .logo{white-space:nowrap}
 @media (max-width:1240px) and (min-width:1081px){.links a{padding:10px 10px}}
 
+
+/* ===== no-clipping guarantees ===== */
+h1,h2,h3,h4{overflow-wrap:break-word}
+/* headline lines: fade-and-rise, never masked */
+h1 .ln{overflow:visible;white-space:normal;padding-bottom:0}
+.js h1 .ln>span{opacity:0;transform:translate3d(0,.35em,0);transition:opacity 1s var(--ease) var(--d,0s),transform 1.2s var(--ease) var(--d,0s)}
+.ready h1 .ln>span{opacity:1;transform:none}
+h1{line-height:.94}
+/* hero grows to fit its content on narrow or short screens */
+@media (max-width:1080px),(max-height:700px){
+  .hero{height:auto;min-height:100svh}
+  .hero-inner{position:relative;inset:auto;min-height:100svh}
+  .hero-inner .wrap{min-height:100svh;padding-top:calc(var(--nav) + 56px)}
+}
+/* next-chapter title scales with the screen */
+.chapter .t{font-size:clamp(40px,7vw,112px)}
+@media (max-width:640px){.chapter .t{font-size:clamp(30px,10.5vw,56px)}}
+.hero .slide,.hero .scrim{height:100%}
+/* ===== touch-friendly targets (44px minimum) ===== */
+@media (max-width:1080px){
+  .nav .logo{min-height:44px}
+  .f-col{gap:0}
+  .f-col a,.f-bottom a{display:flex;align-items:center;min-height:44px}
+  .more a{min-height:44px}
+  .nav .btn{height:44px}
+  .cands{font-size:13px}
+  .room-bar{font-size:10.5px}
+}
+footer .logo{min-height:44px}
