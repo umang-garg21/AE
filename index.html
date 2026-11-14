@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noyron: Machines, designed by physics</title>
+<meta name="description" content="Noyron is building the engine that designs machines end to end. AI agents propose; physics decides.">
+<meta name="theme-color" content="#0a0605">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="video" href="assets/hotfire.mp4" type="video/mp4">
+<link rel="stylesheet" href="assets/site.css">
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+</head>
+<body data-page="home">
+<div id="site-nav"></div>
+<script src="assets/site.js"></script>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <video class="slide on" data-i="0" src="assets/hotfire.mp4" poster="assets/hotfire.jpg" muted playsinline preload="auto"></video>
+  <div class="slide s3d" data-i="1"><canvas id="hero3d" aria-label="Interactive 3D thrust chamber"></canvas><div class="labels" id="heroLabels"></div></div>
+  <video class="slide" data-i="2" src="assets/printed-engine.mp4" poster="assets/printed-engine.jpg" muted playsinline preload="metadata"></video>
+  <video class="slide" data-i="3" src="assets/fab.mp4" poster="assets/fab.jpg" muted playsinline preload="metadata"></video>
+  <div class="scrim"></div>
+
+  <div class="hud"><div class="wrap"><div class="hud-in" id="hud"></div></div></div>
+
+  <div class="hero-inner">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="eyebrow mono fade-up" style="--d:.1s"><i></i>Autonomous engineering</div>
+        <h1><span class="ln"><span style="--d:.15s">Machines,</span></span><span class="ln"><span style="--d:.27s">designed by</span></span><span class="ln"><span style="--d:.39s" class="accent">physics.</span></span></h1>
+        <p class="lede fade-up" style="--d:.7s">We're building the engine that designs machines end to end. AI agents propose. Simulation and hard rules decide. So hardware can move at the speed of software.</p>
+        <div class="hero-ctas fade-up" style="--d:.85s">
+          <a class="btn btn-hot" href="#inside">See a design come alive <span class="ar">→</span></a>
+          <a class="btn" href="technology.html">How the engine works</a>
+        </div>
+      </div>
+      <div class="meta fade-up" style="--d:1s" id="meta">
+        <div class="meta-top mono"><span><b id="sc-n">01</b> / 04</span><span id="sc-k">Footage · NASA</span></div>
+        <div>
+          <div class="meta-title" id="sc-t"></div>
+          <div class="meta-sub" id="sc-s"></div>
+        </div>
+        <div class="hint mono" id="hint"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 8h12M5 5 2 8l3 3M11 5l3 3-3 3"/></svg>Drag to orbit the model</div>
+        <div class="seg" id="seg"><button data-act="ignite">Ignite</button><button data-act="section">Section</button><button data-act="explode">Explode</button></div>
+        <div class="prog" id="prog"></div>
+      </div>
+    </div>
+  </div>
+  <div class="scrollcue"></div>
+</header>
+
+<!-- ============ 01 MISSION ============ -->
+<section class="mission" id="mission">
+  <div class="wrap">
+    <div class="grid sh">
+      <div class="sh-idx mono rv"><b>01</b>Mission</div>
+      <div class="sh-body">
+        <h2><span class="rv">Agents propose.</span><span class="rv accent" style="--d:.12s">Physics decides.</span></h2>
+      </div>
+      <div class="mission-foot">
+        <p class="rv" style="--d:.2s">Language models are brilliant at ideas and unreliable at being right. Noyron uses them for what they are good at, inside a machine where the rules are code, the judge is simulation, and every decision is on the record.</p>
+        <div class="sig mono rv" style="--d:.3s">Rules are code<br>Simulation is the judge<br>Nothing goes unchecked</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 PROBLEM ============ -->
+<section class="rule" id="problem">
+  <div class="wrap">
+    <div class="grid sh">
+      <div class="sh-idx mono rv"><b>02</b>The problem</div>
+      <div class="sh-body">
+        <h2 class="rv">Hardware still moves at the speed of <span class="accent">hand-run simulation.</span></h2>
+        <p class="rv" style="--d:.1s">A new cold plate, heat exchanger or thrust chamber takes a specialist team months of CAD, meshing, CFD and redesign. That loop sets the pace for everything that runs hot, from AI data centres to rockets.</p>
+      </div>
+    </div>
+    <div class="grid cards">
+      <div class="card rv"><div class="k mono">Why now<span>01</span></div><h3>Chips crossed a thermal wall</h3><p>AI accelerators now draw around a kilowatt each. Every new generation needs new liquid-cooling hardware, and needs it fast.</p></div>
+      <div class="card rv" style="--d:.1s"><div class="k mono">Why now<span>02</span></div><h3>Any geometry can be built</h3><p>Metal additive manufacturing prints lattices and channels no machinist could make. The design space now exceeds what people can search.</p></div>
+      <div class="card rv" style="--d:.2s"><div class="k mono">Why now<span>03</span></div><h3>Physics can grade AI</h3><p>Simulation answers "does this part work?" with a number. That makes engineering one of the few fields where models can learn from reward, not imitation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 ENGINE ============ -->
+<section class="rule" id="engine">
+  <div class="wrap">
+    <div class="grid sh">
+      <div class="sh-idx mono rv"><b>03</b>The engine</div>
+      <div class="sh-body">
+        <h2 class="rv">From a requirement to a <span class="accent">verified part.</span></h2>
+        <p class="rv" style="--d:.1s">One loop runs every problem the engine takes on. It halts only when a decision genuinely belongs to a person.</p>
+      </div>
+    </div>
+    <div class="grid loop rv" id="loop">
+      <div class="step"><div class="n mono">01</div><h3>Define</h3><p>Requirements, limits and margins are fixed by rule before any design exists.</p></div>
+      <div class="step"><div class="n mono">02</div><h3>Architect</h3><p>Agent teams explore every viable family, grounded in handbooks and literature.</p></div>
+      <div class="step"><div class="n mono">03</div><h3>Generate</h3><p>Geometry is written as code: lattices, channels, manifolds, printable CAD.</p></div>
+      <div class="step"><div class="n mono">04</div><h3>Simulate</h3><p>Fast models screen. Self-checked CFD judges, at worst-case tolerance.</p></div>
+      <div class="step"><div class="n mono">05</div><h3>Decide</h3><p>Deterministic rules accept or reject. Every choice is written to a ledger.</p></div>
+      <div class="step"><div class="n mono">06</div><h3>Learn</h3><p>Outcomes become verifiable rewards for our own design model.</p></div>
+    </div>
+    <div class="more mono rv"><span>Verification tiers, the control room, and how the model learns</span><a href="technology.html">Explore the technology <span class="ar">→</span></a></div>
+  </div>
+</section>
+
+<!-- ============ 04 INSIDE (scroll story) ============ -->
+<section class="story rule" id="inside">
+  <div class="sticky">
+    <canvas id="story3d" aria-label="3D thrust chamber, scroll to explore"></canvas>
+    <div class="labels" id="storyLabels"></div>
+    <div class="story-ui">
+      <div class="wrap">
+        <div class="sh-idx mono"><b>04</b>Inside a design</div>
+        <div class="ssteps">
+          <div class="sstep" data-i="0"><div class="mono">01 / Design</div><h3>Written as code, not drawn.</h3><p>A regeneratively cooled thrust chamber. Every channel, wall and manifold comes from rules the engine can check, so any variant is one parameter away.</p></div>
+          <div class="sstep" data-i="1"><div class="mono">02 / Parts</div><h3>Every part, chosen and justified.</h3><p>Agents pick the layout, the components and the alloy of each part, cite why, and log the decision.</p></div>
+          <div class="sstep" data-i="2"><div class="mono">03 / Physics</div><h3>Cut it open. Read the physics.</h3><p>Flow accelerates through the throat; the wall runs hottest there. Fast models screen thousands of variants, and self-checked CFD has the final word.</p></div>
+          <div class="sstep" data-i="3"><div class="mono">04 / Proof</div><h3>Then it has to survive.</h3><p>Only designs that hold every margin at worst-case tolerance move on to print and test. Physics decides.</p></div>
+        </div>
+        <div class="sfoot">
+          <div class="sprog mono" id="sprog"><div><b></b>Design</div><div><b></b>Parts</div><div><b></b>Physics</div><div><b></b>Proof</div></div>
+          <div class="legend mono" id="legend">Flow speed · wall temperature<div class="bar"></div><div class="ends"><span>Low</span><span>High</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 APPLICATIONS (teaser) ============ -->
+<section class="rule" id="applications">
+  <div class="wrap">
+    <div class="grid sh">
+      <div class="sh-idx mono rv"><b>05</b>Applications</div>
+      <div class="sh-body">
+        <h2 class="rv">One engine. <span class="accent">Every machine</span> that moves heat, fluid or force.</h2>
+        <p class="rv" style="--d:.1s">Domain packs teach the engine a new kind of problem. The loop, the rules and the ledger stay the same.</p>
+      </div>
+    </div>
+    <div class="grid dgrid">
+      <a class="d rv" href="applications.html#cold-plates"><canvas data-viz="plate"></canvas><span class="go mono">→</span><span class="st now">Now</span><h3>Liquid cold plates for AI chips</h3><p>Direct-to-chip, single-phase plates for kilowatt-class GPUs: skived, machined and printed copper, judged against real chip limits.</p></a>
+      <a class="d rv" style="--d:.08s" href="applications.html#heat-exchangers"><canvas data-viz="hx"></canvas><span class="go mono">→</span><span class="st now">Now</span><h3>Printed heat exchangers</h3><p>Whole-part designs where the engine chooses the architecture, cell count, headers and alloy, then proves them in CFD.</p></a>
+      <a class="d rv" href="applications.html#propulsion"><canvas data-viz="chamber"></canvas><span class="go mono">→</span><span class="st next">Next</span><h3>Thrust chambers and propulsion</h3><p>Regeneratively cooled chambers, injectors and nozzles: the same thermal-fluid core, at much higher stakes.</p></a>
+      <a class="d rv" style="--d:.08s" href="applications.html#assemblies"><canvas data-viz="assembly"></canvas><span class="go mono">→</span><span class="st hz">Horizon</span><h3>Machines and assemblies</h3><p>Component libraries and assemblies, from a single printed part to a whole system designed end to end.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 STATUS ============ -->
+<section class="rule" id="status">
+  <div class="wrap">
+    <div class="grid sh">
+      <div class="sh-idx mono rv"><b>06</b>Progress</div>
+      <div class="sh-body">
+        <h2 class="rv">Where we are, <span class="accent">honestly.</span></h2>
+        <p class="rv" style="--d:.1s">We're early, and we only claim what's verified. Here is what exists today and what comes next.</p>
+      </div>
+    </div>
+    <div class="grid stats rv">
+      <div class="stat"><div class="v" data-count="2">0</div><div class="k">domain packs running in the governed engine</div></div>
+      <div class="stat"><div class="v"><span data-count="187">0</span><small>k</small></div><div class="k">indexed passages from 62 engineering sources, text and figures</div></div>
+      <div class="stat"><div class="v" data-count="3">0</div><div class="k">tiers of physics: fast models, coarse CFD, self-checked CFD</div></div>
+      <div class="stat"><div class="v" data-count="1">0</div><div class="k">in-house vision-language design model in training</div></div>
+    </div>
+    <div class="more mono rv"><span>Verified results, open questions and the roadmap</span><a href="progress.html">See full progress <span class="ar">→</span></a></div>
+  </div>
+</section>
+
+<!-- ============ 07 JOIN ============ -->
+<section class="rule join" id="join">
+  <canvas data-viz="embers"></canvas>
+  <div class="wrap">
+    <div class="grid">
+      <div class="sh-idx mono rv"><b>07</b>Work with us</div>
+      <div class="sh-body"><h2 class="rv">Bring us a <span class="accent">hard part.</span></h2></div>
+      <div class="jcols">
+        <div class="jcol rv"><h4>Design partners</h4><p>One part takes your team months. Let's run it through the engine together.</p><a class="btn btn-hot" href="contact.html#partners">Become a design partner <span class="ar">→</span></a></div>
+        <div class="jcol rv" style="--d:.1s"><h4>Investors and teammates</h4><p>We're raising and building a founding team of seasoned engineers who want to build the engine itself.</p><a class="btn" href="contact.html">Talk to us <span class="ar">→</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-next"></div>
+<div id="site-footer"></div>
+
+
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+import { createEngineView } from './engine.js';
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+
+const { CONFIG: CFG } = window.Site;
+
+/* ---------- HERO ---------- */
+const SCENES = [
+  { title: 'Hot-fire', sub: 'A full-scale liquid rocket engine at full thrust. The kind of machine we want to design in weeks.', key: 'Footage · NASA', hud: [['Scene', 'Hot-fire'], ['Site', 'Stennis test stand'], ['Duty', 'Full thrust']] },
+  { title: 'The design, live', sub: 'A regeneratively cooled thrust chamber, rendered in real time. Cut it open or light it.', key: 'Interactive · 3D', hud: [['Scene', 'Live model'], ['Chamber', 'CuCrZr'], ['Nozzle', '120 tubes']] },
+  { title: 'Printed engines fire', sub: 'A 3D-printed rocket engine on the stand. Printed geometry is real, flight-class hardware.', key: 'Footage · NASA', hud: [['Scene', 'Printed engine'], ['Process', 'Additive'], ['Status', 'Hot-fire test']] },
+  { title: 'Design fab', sub: 'Robots, metal printers and engineers: where a verified design becomes hardware.', key: 'Footage · NASA', hud: [['Scene', 'Design fab'], ['Process', 'Laser powder bed'], ['Output', 'Test articles']] },
+];
+const slides = $$('.slide'), prog = $('#prog'), seg = $('#seg'), hint = $('#hint'), hud = $('#hud');
+let cur = -1, timer = 0, ig = 0, idle = 0, held = false, hero3d = null;
+SCENES.forEach((s, i) => { const b = document.createElement('button'); b.setAttribute('aria-label', `Scene ${i + 1}: ${s.title}`); b.innerHTML = '<span></span>'; b.onclick = () => go(i, true); prog.appendChild(b); });
+try { hero3d = createEngineView($('#hero3d'), { interactive: true, shiftX: .22, labelLayer: $('#heroLabels') }); } catch (e) { console.error('3D unavailable', e); }
+
+const dur = i => { const v = slides[i]; return v.tagName === 'VIDEO' ? (isFinite(v.duration) && v.duration ? v.duration : 8) : CFG.scene3dSeconds; };
+function setText(el, txt) { if (el.textContent === txt) return; el.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 220, easing: 'ease-in', fill: 'forwards' }).onfinish = () => { el.textContent = txt; el.animate([{ opacity: 0, transform: 'translateY(6px)' }, { opacity: 1, transform: 'none' }], { duration: 520, easing: 'cubic-bezier(.2,.7,.15,1)', fill: 'forwards' }); }; }
+function go(i, user) {
+  if (i === 1 && !hero3d) i = 2;
+  if (i === cur) return;
+  clearTimeout(timer); clearTimeout(ig);
+  const prev = cur; cur = i; const s = SCENES[i];
+  slides.forEach((el, k) => {
+    el.classList.toggle('on', k === i);
+    if (el.tagName === 'VIDEO') { if (k === i) { el.currentTime = 0; el.play().catch(() => {}); } else if (k === prev) setTimeout(() => { if (cur !== k) el.pause(); }, 1400); }
+  });
+  const nx = slides[(i + 1) % slides.length]; if (nx.tagName === 'VIDEO') nx.preload = 'auto';
+  $('#sc-n').textContent = String(i + 1).padStart(2, '0');
+  setText($('#sc-t'), s.title); setText($('#sc-s'), s.sub); setText($('#sc-k'), s.key);
+  hud.style.opacity = 0; setTimeout(() => { hud.innerHTML = s.hud.map(([k, v]) => `${k}<b>${v}</b>`).join('<br>'); hud.style.opacity = 1; }, 300);
+  const d = dur(i); document.documentElement.style.setProperty('--dur', d + 's');
+  [...prog.children].forEach((b, k) => { b.classList.remove('on', 'done'); void b.offsetWidth; if (k < i) b.classList.add('done'); if (k === i) b.classList.add('on'); });
+  seg.classList.toggle('on', i === 1); hint.classList.toggle('on', i === 1);
+  if (hero3d) {
+    if (i === 1) { hero3d.reset(); hero3d.start(); syncSeg(); ig = setTimeout(() => { if (cur === 1 && !held) { hero3d.set({ ignite: 1, labels: 'none' }); syncSeg(); } }, 4200); }
+    else setTimeout(() => { if (cur !== 1) hero3d.stop(); }, 1500);
+  }
+  schedule(d);
+}
+function schedule(d) { clearTimeout(timer); timer = setTimeout(() => { if (held) return schedule(1); go((cur + 1) % SCENES.length); }, d * 1000); }
+slides.forEach((v, k) => { if (v.tagName === 'VIDEO') v.addEventListener('loadedmetadata', () => { if (k === cur) { document.documentElement.style.setProperty('--dur', v.duration + 's'); const b = prog.children[k]; b.classList.remove('on'); void b.offsetWidth; b.classList.add('on'); schedule(v.duration - v.currentTime); } }); });
+// holding: user interacting with the model pauses the rotation, resumes after idle
+function hold() { held = true; prog.classList.add('paused'); clearTimeout(idle); idle = setTimeout(() => { held = false; prog.classList.remove('paused'); }, 7000); }
+$('#hero3d')?.addEventListener('pointerdown', hold);
+seg.addEventListener('pointerenter', hold);
+function syncSeg() { const st = hero3d.state; seg.querySelectorAll('button').forEach(b => b.classList.toggle('act', !!st[b.dataset.act])); }
+seg.querySelectorAll('button').forEach(b => b.onclick = () => {
+  hold(); clearTimeout(ig);
+  const a = b.dataset.act, on = !hero3d.state[a];
+  const next = { ignite: 0, section: 0, explode: 0 }; next[a] = on ? 1 : 0;
+  next.labels = next.ignite ? 'none' : next.section ? 'cfd' : next.explode ? 'parts' : 'cad';
+  hero3d.set(next); syncSeg();
+});
+new IntersectionObserver(([e]) => { if (!hero3d) return; if (e.isIntersecting && cur === 1) hero3d.start(); else hero3d.stop(); }).observe($('#top'));
+go(0);
+
+/* ---------- STORY ---------- */
+const story = $('#inside'), steps = $$('.sstep'), sp = $$('#sprog div'), legend = $('#legend');
+let P = 0, stage = -1, sv = null;
+const sm = t => t * t * (3 - 2 * t), lerp = (a, b, t) => a + (b - a) * t;
+// [progress, azimuth, distance, height, targetY]
+const KEYS = [[0, .2, 13, 1.4, -.6], [.2, .95, 12.5, .8, -.6], [.27, .6, 16, 2.2, -.5], [.46, .95, 15.5, 1.2, -.5], [.53, .55, 11, .4, -.7], [.71, .75, 10.6, 0, -.7], [.78, .45, 16, -2, -2.6], [1, .8, 17, -2.6, -3]];
+function camAt(p) { let i = 0; while (i < KEYS.length - 2 && p > KEYS[i + 1][0]) i++; const a = KEYS[i], b = KEYS[i + 1], t = sm(Math.min(1, Math.max(0, (p - a[0]) / (b[0] - a[0])))); return a.map((v, k) => lerp(v, b[k], t)); }
+try {
+  sv = createEngineView($('#story3d'), { shiftX: .2, labelLayer: $('#storyLabels'),
+    onFrame: (cam, target, m, dt) => { const [, az, r, h, ty] = camAt(P); const A = az + m.x * .18, H = h - m.y * .6, k = 1 - Math.exp(-dt * 3.2);
+      cam.position.x += (Math.sin(A) * r - cam.position.x) * k; cam.position.y += (H - cam.position.y) * k; cam.position.z += (Math.cos(A) * r - cam.position.z) * k; target.y += (ty - target.y) * k; } });
+} catch (e) { console.error(e); }
+function onStory() {
+  const r = story.getBoundingClientRect(); P = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight)));
+  const s = P < .25 ? 0 : P < .5 ? 1 : P < .76 ? 2 : 3;
+  sp.forEach((d, i) => { d.querySelector('b').style.transform = `scaleX(${Math.min(1, Math.max(0, (P - i * .25) / .25))})`; d.classList.toggle('on', i <= s); });
+  if (s === stage) return; stage = s;
+  steps.forEach((el, i) => { el.classList.toggle('on', i === s); el.classList.toggle('past', i < s); });
+  legend.classList.toggle('on', s === 2);
+  sv?.set({ explode: s === 1 ? 1 : 0, section: s === 2 ? 1 : 0, ignite: s === 3 ? 1 : 0, labels: ['cad', 'parts', 'cfd', 'none'][s] });
+}
+addEventListener('scroll', onStory, { passive: true }); onStory();
+if (sv) new IntersectionObserver(([e]) => e.isIntersecting ? sv.start() : sv.stop(), { rootMargin: '200px' }).observe(story);
+
+</script>
+</body>
+</html>

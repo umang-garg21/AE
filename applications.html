@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Applications · Noyron</title>
+<meta name="description" content="The machines the Noyron engine designs today, and next.">
+<meta name="theme-color" content="#0a0605">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+</head>
+<body data-page="applications">
+<div id="site-nav"></div>
+<script src="assets/site.js"></script>
+<header class="phero"><img class="bgimg" src="assets/printed-engine.jpg" alt="">
+  <div class="wrap grid">
+    <div class="crumb mono fade-up" style="--d:.05s"><b>03</b>Applications</div>
+    <h1><span class="ln"><span style="--d:0.12s">What the engine</span></span><span class="ln"><span style="--d:0.24s"><span class="accent">designs.</span></span></span></h1>
+    <p class="lede fade-up" style="--d:.55s">Domain packs teach the engine a new kind of problem. We start where heat is the bottleneck and the stakes are measurable, then widen to whole machines.</p>
+    <nav class="toc fade-up" style="--d:.7s" aria-label="On this page"><a class="mono" href="#cold-plates">Cold plates</a><a class="mono" href="#heat-exchangers">Heat exchangers</a><a class="mono" href="#propulsion">Propulsion</a><a class="mono" href="#assemblies">Assemblies</a></nav>
+  </div>
+</header>
+<section class="rule" style="padding-top:clamp(56px,6vw,88px)"><div class="wrap"><article class="feat" id="cold-plates">
+      <div class="vis rv"><canvas data-viz="plate"></canvas></div>
+      <div class="txt rv" style="--d:.1s"><span class="st now">Now</span><h3>Liquid cold plates for AI chips</h3>
+        <dl><div><dt>The problem</dt><dd>Kilowatt-class accelerators need direct-to-chip liquid cooling, and every new chip generation needs a new plate, designed against tight thermal and pressure limits.</dd></div><div><dt>What the engine does</dt><dd>Explores skived, machined and printed copper families, sizes fins and manifolds, and judges each plate on mean case temperature and the hottest point on the chip.</dd></div><div><dt>Where it stands</dt><dd>Running end to end with CFD-gated rounds. The current milestone is the first plate that meets a real chip’s limits in self-checked CFD.</dd></div></dl></div>
+    </article><article class="feat" id="heat-exchangers">
+      <div class="vis rv"><canvas data-viz="hx"></canvas></div>
+      <div class="txt rv" style="--d:.1s"><span class="st now">Now</span><h3>Printed heat exchangers</h3>
+        <dl><div><dt>The problem</dt><dd>Additive manufacturing allows cores and headers no machine shop could make, but designing them still takes specialists months of iteration.</dd></div><div><dt>What the engine does</dt><dd>Chooses the whole part: architecture, cell count, headers and alloy, then checks pressure drop, effectiveness and wall stress at worst-case tolerance.</dd></div><div><dt>Where it stands</dt><dd>Whole-part designs have run live in the governed engine. Compressible header CFD is being qualified.</dd></div></dl></div>
+    </article><article class="feat" id="propulsion">
+      <div class="vis rv"><canvas data-viz="chamber"></canvas></div>
+      <div class="txt rv" style="--d:.1s"><span class="st next">Next</span><h3>Thrust chambers and propulsion</h3>
+        <dl><div><dt>The problem</dt><dd>Regeneratively cooled chambers live at the edge of materials: extreme heat flux at the throat, thin printed walls, no margin for guesswork.</dd></div><div><dt>What the engine does</dt><dd>The same thermal-fluid core: cooling channels, wall temperature and pressure loss, judged with the same rules and the same ledger.</dd></div><div><dt>Where it stands</dt><dd>Next domain pack. Not yet built; the engine’s thermal-fluid core is the foundation.</dd></div></dl></div>
+    </article><article class="feat" id="assemblies">
+      <div class="vis rv"><canvas data-viz="assembly"></canvas></div>
+      <div class="txt rv" style="--d:.1s"><span class="st hz">Horizon</span><h3>Machines and assemblies</h3>
+        <dl><div><dt>The problem</dt><dd>Real products are systems: parts that must fit, connect and work together under shared constraints.</dd></div><div><dt>What the engine does</dt><dd>Component libraries and assemblies, so the engine can reason from a requirement down to every part of a machine.</dd></div><div><dt>Where it stands</dt><dd>On the roadmap, after single-part domains are verified.</dd></div></dl></div>
+    </article></div></section>
+<div id="site-next"></div>
+<div id="site-footer"></div>
+</body>
+</html>
