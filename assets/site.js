@@ -2,8 +2,9 @@
    Every page loads this file right after <body>. Edit CONFIG and PAGES here and the whole site follows. */
 (function () {
   const CONFIG = window.CONFIG = {
-    brand: 'NOYRON',                 // company name, everywhere
-    email: 'hello@example.com',      // contact address, everywhere
+    brand: 'AE',                     // company mark, everywhere
+    brandLong: 'Automated Engineering',
+    email: '',                      // contact address; leave '' to hide it until you have one
     scene3dSeconds: 14               // home hero: time the live 3D scene stays up
   };
   // Site map, in reading order. Each page ends by handing off to the next one.
@@ -23,7 +24,7 @@
   const navSlot = document.getElementById('site-nav');
   if (navSlot) navSlot.outerHTML = `
   <nav class="nav" id="nav"><div class="wrap">
-    <a class="logo" href="index.html" aria-label="${CONFIG.brand} home">${LOGO}<span>${CONFIG.brand}</span></a>
+    <a class="logo" href="index.html" aria-label="${CONFIG.brand} ${CONFIG.brandLong}, home">${LOGO}<span>${CONFIG.brand}</span><em class="logo-sub mono">${CONFIG.brandLong}</em></a>
     <div class="links mono">${PAGES.filter(p => p.nav).map(p => `<a href="${p.href}"${p.key === page ? ' class="cur" aria-current="page"' : ''}>${p.title}</a>`).join('')}</div>
     <a class="btn${page === 'contact' ? ' btn-hot' : ''}" href="contact.html">Contact</a>
     <span class="scrollbar" id="scrollbar"></span>
@@ -41,16 +42,20 @@
     } else if (nextSlot) nextSlot.remove();
     const f = document.getElementById('site-footer');
     if (f) f.outerHTML = `<footer><div class="wrap grid">
-      <div class="f-brand"><a class="logo" href="index.html">${LOGO}<span>${CONFIG.brand}</span></a>
+      <div class="f-brand"><a class="logo" href="index.html">${LOGO}<span>${CONFIG.brand}</span><em class="logo-sub mono">${CONFIG.brandLong}</em></a>
         <p>Machines, designed by physics. We are building the engine that designs hardware end to end, so it can move at the speed of software.</p></div>
       <div class="f-col f-c1 mono"><span class="h">Product</span><a href="technology.html">Technology</a><a href="applications.html">Applications</a><a href="progress.html">Progress</a></div>
       <div class="f-col f-c2 mono"><span class="h">Company</span><a href="company.html">About</a><a href="company.html#roles">Open roles</a><a href="contact.html">Contact</a></div>
       <div class="f-credit">Hero and page footage: NASA, public domain. Use does not imply NASA endorsement.<br>3D model and control-room values are illustrative.</div>
-      <div class="f-bottom mono"><span>© ${new Date().getFullYear()} ${CONFIG.brand}</span><a class="email-link" href="mailto:${CONFIG.email}">${CONFIG.email}</a></div>
+      <div class="f-bottom mono"><span>© ${new Date().getFullYear()} ${CONFIG.brand} · ${CONFIG.brandLong}</span>${CONFIG.email ? `<a href="mailto:${CONFIG.email}">${CONFIG.email}</a>` : '<a href="contact.html">Contact</a>'}</div>
     </div></footer>`;
     document.querySelectorAll('.brand').forEach(e => e.textContent = CONFIG.brand);
-    document.querySelectorAll('.mailto').forEach(a => a.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent(a.dataset.subject || '')}`);
-    document.querySelectorAll('.email').forEach(e => e.textContent = CONFIG.email);
+    // With an email set, buttons open a pre-addressed message; without one they say so plainly.
+    document.querySelectorAll('.mailto').forEach(a => {
+      if (CONFIG.email) a.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent((a.dataset.subject || '') + ' · ' + CONFIG.brand)}`;
+      else { a.removeAttribute('href'); a.classList.add('soon'); a.innerHTML = 'Contact opens soon'; a.setAttribute('aria-disabled', 'true'); }
+    });
+    document.querySelectorAll('.email').forEach(e => { if (CONFIG.email) e.textContent = CONFIG.email; else e.remove(); });
   }
 
   /* ---------- helpers shared with page scripts ---------- */
@@ -110,7 +115,7 @@
   /* ---------- boot after the page body exists ---------- */
   function boot() {
     shell();
-    requestAnimationFrame(() => document.body.classList.add('ready'));
+    requestAnimationFrame(() => document.documentElement.classList.add('ready'));
     // smooth scroll
     let lenis = null;
     if (window.Lenis && !reduce) {
@@ -130,6 +135,7 @@
       e.target.querySelectorAll('[data-count]').forEach(el => { const n = +el.dataset.count, t0 = performance.now(); (function f(t) { const p = Math.min(1, (t - t0) / 1600); el.textContent = Math.round(n * (1 - Math.pow(1 - p, 4))); if (p < 1) requestAnimationFrame(f); })(t0); });
     }), { threshold: .15, rootMargin: '0px 0px -8% 0px' });
     document.querySelectorAll('.rv').forEach(el => io.observe(el));
+    document.documentElement.classList.add('io');
     document.querySelectorAll('canvas[data-viz]').forEach(c => viz(c, c.dataset.viz));
     controlRoom();
   }

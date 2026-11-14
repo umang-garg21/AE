@@ -231,13 +231,14 @@ export function createEngineView(canvas, opts = {}) {
 
   // ---- state ----
   const state = { ignite: 0, section: 0, explode: 0, labels: 'cad' }, cur = { ignite: 0, section: 0, explode: 0 };
-  let shift = opts.shiftX || 0, running = false, last = performance.now(), igniteT = 0;
+  let shift = opts.shiftX || 0, shiftY = opts.shiftY || 0, running = false, last = performance.now(), igniteT = 0;
   const mouse = { x: 0, y: 0 }; addEventListener('pointermove', e => { mouse.x = e.clientX / innerWidth - .5; mouse.y = e.clientY / innerHeight - .5; }, { passive: true });
 
   function resize() {
     const w = canvas.clientWidth, h = canvas.clientHeight; if (!w || !h) return;
     renderer.setSize(w, h, false); composer.setSize(w, h); camera.aspect = w / h;
-    if (shift) camera.setViewOffset(w, h, -w * shift, 0, w, h); else camera.clearViewOffset();
+    const sx = typeof shift === 'function' ? shift(w) : shift, sy = typeof shiftY === 'function' ? shiftY(w) : shiftY;
+    if (sx || sy) camera.setViewOffset(w, h, -w * sx, h * sy, w, h); else camera.clearViewOffset();
     camera.updateProjectionMatrix();
   }
   new ResizeObserver(resize).observe(canvas); resize();
@@ -288,7 +289,9 @@ export function createEngineView(canvas, opts = {}) {
       const show = L.el.dataset.group === state.labels && cur.ignite < 0.3;
       L.parent.localToWorld(tmp.copy(L.local)); tmp.project(camera);
       const x = (tmp.x * 0.5 + 0.5) * w, y = (-tmp.y * 0.5 + 0.5) * h;
-      L.el.style.transform = `translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,0)`; const v = show && tmp.z < 1; if (v !== L.v) { L.v = v; L.el.classList.toggle('on', v); }
+      L.el.style.transform = `translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,0)`;
+      const flip = x > w - 300; if (flip !== L.f) { L.f = flip; L.el.classList.toggle('flip', flip); }
+      const v = show && tmp.z < 1 && w >= 1000 && x > 40 && x < w - 40 && y > 90 && y < h - 120; if (v !== L.v) { L.v = v; L.el.classList.toggle('on', v); }
     }
   }
   return {
