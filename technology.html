@@ -10,74 +10,74 @@
 <script>document.documentElement.classList.add("js");setTimeout(function(){document.documentElement.classList.add("ready")},80);setTimeout(function(){document.documentElement.classList.add("safe")},2500);</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=20261114173640">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20261114182822">
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
 </head>
 <body data-page="technology">
 <div id="site-nav"></div>
-<script src="assets/site.js?v=20261114173640"></script>
+<script src="assets/site.js?v=20261114182822"></script>
 <header class="phero"><img class="bgimg" src="assets/fab.jpg" alt="">
   <div class="wrap grid">
     <div class="crumb mono fade-up" style="--d:.05s"><b>02</b>Technology</div>
     <h1><span class="ln"><span style="--d:0.12s">The engine that</span></span><span class="ln"><span style="--d:0.24s"><span class="accent">designs machines.</span></span></span></h1>
-    <p class="lede fade-up" style="--d:.55s">Three engines run one loop. Yukti <span class="dev" lang="sa">(युक्ति)</span> reasons about the design, Vega <span class="dev" lang="sa">(वेग)</span> predicts its physics in seconds, and Pramana <span class="dev" lang="sa">(प्रमाण)</span> proves it in CFD. Here is how they work together, how they are checked, and how they learn.</p>
+    <p class="lede fade-up" style="--d:.55s">Three engines run one loop. Forge designs, Spark checks the physics in seconds, and Anvil tests the design in full CFD. Here is how they work together, how they are checked, and how they learn.</p>
     <nav class="toc fade-up" style="--d:.7s" aria-label="On this page"><a class="mono" href="#engines">The engines</a><a class="mono" href="#loop">The loop</a><a class="mono" href="#verification">Verification</a><a class="mono" href="#control-room">Control room</a><a class="mono" href="#principles">Principles</a><a class="mono" href="#learning">Learning</a></nav>
   </div>
 </header>
 <section class="rule" id="engines"><div class="wrap">
 <div class="grid sh">
       <div class="sh-idx mono rv"><b>01</b>The engines</div>
-      <div class="sh-body"><h2 class="rv">Decide, predict, <span class="accent">prove.</span></h2><p class="rv" style="--d:.1s">Each engine has one job and a clear hand-off. Each name says what that engine is for.</p></div>
+      <div class="sh-body"><h2 class="rv">Forge it. Spark it. <span class="accent">Test it on the Anvil.</span></h2><p class="rv" style="--d:.1s">Each engine has one job and a clear hand-off. Each name says what that engine is for.</p></div>
     </div>
     <div class="grid engines">
       <article class="eng rv" style="--d:0.0s">
         <div class="eng-k mono"><span>01</span>Design Reasoning</div>
-        <h3 class="eng-name">Yukti <span class="dev" lang="sa">(युक्ति)</span></h3>
-        <div class="eng-mean mono">reasoning · strategy</div>
+        <h3 class="eng-name">Forge</h3>
+        <div class="eng-mean mono">Designs it</div>
         <p>Reads the chip brief, the pump and pressure limits and the shop’s rules. Proposes a CAD revision, says what it expects to improve, and decides what to change next when a check fails.</p>
         <dl class="eng-io"><div><dt class="mono">In</dt><dd>Brief, limits, shop rules</dd></div><div><dt class="mono">Out</dt><dd>Design revisions, each with its reason</dd></div></dl>
         <div class="eng-st mono"><i></i>Running</div>
       </article>
       <article class="eng rv" style="--d:0.1s">
         <div class="eng-k mono"><span>02</span>Fast Physics</div>
-        <h3 class="eng-name">Vega <span class="dev" lang="sa">(वेग)</span></h3>
-        <div class="eng-mean mono">speed · momentum</div>
+        <h3 class="eng-name">Spark</h3>
+        <div class="eng-mean mono">Checks it fast</div>
         <p>Predicts temperature, pressure drop and flow for every candidate in seconds, ranks them, and flags any prediction too uncertain to act on.</p>
         <dl class="eng-io"><div><dt class="mono">In</dt><dd>Candidate geometry</dd></div><div><dt class="mono">Out</dt><dd>Physics estimates with an error range</dd></div></dl>
         <div class="eng-st mono"><i></i>Running · calibrating error ranges</div>
       </article>
       <article class="eng rv" style="--d:0.2s">
         <div class="eng-k mono"><span>03</span>CFD Verification</div>
-        <h3 class="eng-name">Pramana <span class="dev" lang="sa">(प्रमाण)</span></h3>
-        <div class="eng-mean mono">valid proof</div>
+        <h3 class="eng-name">Anvil</h3>
+        <div class="eng-mean mono">Tests it under load</div>
         <p>Runs detailed, self-checked CFD on the exact geometry of the shortlist, checking mesh and convergence, and returns evidence an engineer can sign off.</p>
         <dl class="eng-io"><div><dt class="mono">In</dt><dd>Shortlisted CAD</dd></div><div><dt class="mono">Out</dt><dd>Verified thermal and flow results</dd></div></dl>
         <div class="eng-st mono"><i></i>Running · targeting 100× faster CFD</div>
       </article>
     </div>
-    <div class="eflow mono rv"><span><b>Yukti</b> proposes</span><i>→</i><span><b>Vega</b> screens</span><i>→</i><span><b>Pramana</b> proves</span><i class="back">↩</i><span>verified results train Vega and guide Yukti</span></div>
+    <div class="eflow mono rv"><span><b>Forge</b> designs</span><i>→</i><span><b>Spark</b> checks</span><i>→</i><span><b>Anvil</b> tests</span><i class="back">↩</i><span>tested results sharpen Spark and guide Forge</span></div>
 </div></section>
 <section class="rule" id="loop"><div class="wrap">
 <div class="grid sh">
       <div class="sh-idx mono rv"><b>02</b>The loop</div>
       <div class="sh-body"><h2 class="rv">Six steps, <span class="accent">every problem.</span></h2><p class="rv" style="--d:.1s">The same loop runs whether the part is a cold plate or a heat exchanger. Only the domain pack changes.</p></div>
-    </div><div class="rows"><div class="row2 rv"><div class="n mono">01 · Rules</div><h3>Define</h3><div class="body"><p>Before any design exists, the engine fixes what success means: requirements, physical limits and safety margins, each derived by rule and traced to its source.</p><ul><li>Margins are set in advance and checked independently, so no design can exploit them</li><li>Unknown limits are estimated and flagged, never silently assumed</li><li>Missing inputs, such as a chip’s interface material, stop the run and ask</li></ul></div></div><div class="row2 rv"><div class="n mono">02 · Yukti</div><h3>Architect</h3><div class="body"><p>Agent teams explore every viable family of solution, not just the familiar one. They read engineering handbooks and the open literature, and challenge each other.</p><ul><li>Dedicated concept authors, a diversifier and reviewers per team</li><li>Literature grounds the thinking; it does not dictate the answer</li><li>Materials are chosen for the job, preferring proven alloys when options tie</li></ul></div></div><div class="row2 rv"><div class="n mono">03 · Yukti</div><h3>Generate</h3><div class="body"><p>Every design is written as code: implicit geometry for lattices, channels, manifolds and headers, exported as printable CAD.</p><ul><li>Any variant is a parameter change away</li><li>Manufacturing rules are built into the geometry, not checked afterwards</li></ul></div></div><div class="row2 rv"><div class="n mono">04 · Vega → Pramana</div><h3>Simulate</h3><div class="body"><p>Vega screens candidates in seconds. Promising ones go to Pramana, whose CFD checks its own numerics before its answer counts.</p><ul><li>Worst-case manufacturing tolerances on every run</li><li>Up to three CFD refinement rounds per run</li></ul></div></div><div class="row2 rv"><div class="n mono">05 · Rules</div><h3>Decide</h3><div class="body"><p>Deterministic code, not a prompt, accepts or rejects each design. Every autonomous decision is written to a ledger with its evidence.</p><ul><li>The engine halts only for decisions that genuinely belong to a person</li><li>Rules are versioned; a change of rule is itself a recorded decision</li></ul></div></div><div class="row2 rv"><div class="n mono">06 · All three</div><h3>Learn</h3><div class="body"><p>Pramana’s verified results calibrate Vega and become verifiable rewards for Yukti, so all three engines get better with every problem solved.</p></div></div></div>
+    </div><div class="rows"><div class="row2 rv"><div class="n mono">01 · Rules</div><h3>Define</h3><div class="body"><p>Before any design exists, the engine fixes what success means: requirements, physical limits and safety margins, each derived by rule and traced to its source.</p><ul><li>Margins are set in advance and checked independently, so no design can exploit them</li><li>Unknown limits are estimated and flagged, never silently assumed</li><li>Missing inputs, such as a chip’s interface material, stop the run and ask</li></ul></div></div><div class="row2 rv"><div class="n mono">02 · Forge</div><h3>Architect</h3><div class="body"><p>Agent teams explore every viable family of solution, not just the familiar one. They read engineering handbooks and the open literature, and challenge each other.</p><ul><li>Dedicated concept authors, a diversifier and reviewers per team</li><li>Literature grounds the thinking; it does not dictate the answer</li><li>Materials are chosen for the job, preferring proven alloys when options tie</li></ul></div></div><div class="row2 rv"><div class="n mono">03 · Forge</div><h3>Generate</h3><div class="body"><p>Every design is written as code: implicit geometry for lattices, channels, manifolds and headers, exported as printable CAD.</p><ul><li>Any variant is a parameter change away</li><li>Manufacturing rules are built into the geometry, not checked afterwards</li></ul></div></div><div class="row2 rv"><div class="n mono">04 · Spark → Anvil</div><h3>Simulate</h3><div class="body"><p>Spark checks candidates in seconds. Promising ones go to Anvil, whose CFD checks its own numerics before its answer counts.</p><ul><li>Worst-case manufacturing tolerances on every run</li><li>Up to three CFD refinement rounds per run</li></ul></div></div><div class="row2 rv"><div class="n mono">05 · Rules</div><h3>Decide</h3><div class="body"><p>Deterministic code, not a prompt, accepts or rejects each design. Every autonomous decision is written to a ledger with its evidence.</p><ul><li>The engine halts only for decisions that genuinely belong to a person</li><li>Rules are versioned; a change of rule is itself a recorded decision</li></ul></div></div><div class="row2 rv"><div class="n mono">06 · All three</div><h3>Learn</h3><div class="body"><p>Anvil’s tested results calibrate Spark and become verifiable rewards for Forge, so all three engines get better with every problem solved.</p></div></div></div>
 </div></section>
 <section class="rule" id="verification"><div class="wrap">
 <div class="grid sh">
       <div class="sh-idx mono rv"><b>03</b>Verification</div>
-      <div class="sh-body"><h2 class="rv">Vega screens. <span class="accent">Pramana proves.</span></h2><p class="rv" style="--d:.1s">Speed where it is safe, fidelity where it matters. A design climbs the tiers only while it keeps its margins.</p></div>
+      <div class="sh-body"><h2 class="rv">Spark checks. <span class="accent">Anvil tests.</span></h2><p class="rv" style="--d:.1s">Speed where it is safe, fidelity where it matters. A design climbs the tiers only while it keeps its margins.</p></div>
     </div>
     <div class="grid tiers">
-      <div class="tier rv"><div class="k mono">Tier 01<span>Vega · screen</span></div><h3>Fast physics <span class="dev" lang="sa">(वेग)</span></h3><p>Vega scores thousands of variants. They must meet requirements within their own stated uncertainty, or the design never reaches CFD.</p>
+      <div class="tier rv"><div class="k mono">Tier 01<span>Spark · check</span></div><h3>Fast physics</h3><p>Spark scores thousands of variants. They must meet requirements within their own stated uncertainty, or the design never reaches CFD.</p>
         <div class="meter"><div>Speed<i style="--v:1"><b></b></i></div><div>Fidelity<i style="--v:.35"><b></b></i></div></div></div>
-      <div class="tier rv" style="--d:.08s"><div class="k mono">Tier 02<span>Pramana · search</span></div><h3>Coarse CFD</h3><p>Yukti’s architects get a coarse Pramana budget while searching, to catch what fast models miss before committing to a design.</p>
+      <div class="tier rv" style="--d:.08s"><div class="k mono">Tier 02<span>Anvil · search</span></div><h3>Coarse CFD</h3><p>Forge’s architects get a coarse Anvil budget while searching, to catch what fast models miss before committing to a design.</p>
         <div class="meter"><div>Speed<i style="--v:.6"><b></b></i></div><div>Fidelity<i style="--v:.65"><b></b></i></div></div></div>
-      <div class="tier rv" style="--d:.16s"><div class="k mono">Tier 03<span>Pramana · judge</span></div><h3>Self-checked CFD <span class="dev" lang="sa">(प्रमाण)</span></h3><p>The final word. Grid and convergence checks run with every result; a solve that fails its own checks does not count.</p>
+      <div class="tier rv" style="--d:.16s"><div class="k mono">Tier 03<span>Anvil · test</span></div><h3>Self-checked CFD</h3><p>The final word. Grid and convergence checks run with every result; a solve that fails its own checks does not count.</p>
         <div class="meter"><div>Speed<i style="--v:.25"><b></b></i></div><div>Fidelity<i style="--v:1"><b></b></i></div></div></div>
     </div>
-    <div class="target rv"><span class="mono">Target</span><p>Pramana is being built to run detailed CFD <b>100× faster</b> on selected cold-plate cases. We will report it as a result only when it is measured against our current solver on identical geometry and conditions, within agreed tolerances on temperature and pressure drop.</p></div>
+    <div class="target rv"><span class="mono">Target</span><p>Anvil is being built to run detailed CFD <b>100× faster</b> on selected cold-plate cases. We will report it as a result only when it is measured against our current solver on identical geometry and conditions, within agreed tolerances on temperature and pressure drop.</p></div>
 </div></section>
 <section class="rule" id="control-room"><div class="wrap">
 <div class="grid sh">
@@ -128,7 +128,7 @@
 <div class="grid sh">
       <div class="sh-idx mono rv"><b>06</b>Learning</div>
       <div class="sh-body"><h2 class="rv">From an engine <span class="accent">to a model.</span></h2><p class="rv" style="--d:.1s">Every problem the engine solves produces something rare in engineering: a design paired with a physics-checked verdict.</p></div>
-    </div><div class="rows"><div class="row2 rv"><div class="n mono">01</div><h3>Verifiable rewards</h3><div class="body"><p>Simulation answers whether a part works with numbers, not opinions. Those numbers become rewards for reinforcement learning, so the model learns from outcomes rather than imitation.</p></div></div><div class="row2 rv"><div class="n mono">02</div><h3>A self-directed curriculum</h3><div class="body"><p>The model starts with the basic components the engineering literature describes, designs them itself, gets physics feedback, and widens its scope as it masters each rung.</p></div></div><div class="row2 rv"><div class="n mono">03</div><h3>Our own model, in the loop</h3><div class="body"><p>A vision-language design model trained on these rewards is in development. It is built to become Yukti’s own reasoning, replacing general-purpose models.</p></div></div></div>
+    </div><div class="rows"><div class="row2 rv"><div class="n mono">01</div><h3>Verifiable rewards</h3><div class="body"><p>Simulation answers whether a part works with numbers, not opinions. Those numbers become rewards for reinforcement learning, so the model learns from outcomes rather than imitation.</p></div></div><div class="row2 rv"><div class="n mono">02</div><h3>A self-directed curriculum</h3><div class="body"><p>The model starts with the basic components the engineering literature describes, designs them itself, gets physics feedback, and widens its scope as it masters each rung.</p></div></div><div class="row2 rv"><div class="n mono">03</div><h3>Our own model, in the loop</h3><div class="body"><p>A vision-language design model trained on these rewards is in development. It is built to become Forge’s own reasoning, replacing general-purpose models.</p></div></div></div>
 </div></section>
 
 <div id="site-next"></div>
