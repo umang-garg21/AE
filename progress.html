@@ -10,13 +10,13 @@
 <script>document.documentElement.classList.add("js");setTimeout(function(){document.documentElement.classList.add("ready")},80);setTimeout(function(){document.documentElement.classList.add("safe")},2500);</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=20261114145920">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20261114173640">
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
 </head>
 <body data-page="progress">
 <div id="site-nav"></div>
-<script src="assets/site.js?v=20261114145920"></script>
+<script src="assets/site.js?v=20261114173640"></script>
 <header class="phero"><img class="bgimg" src="assets/hotfire.jpg" alt="">
   <div class="wrap grid">
     <div class="crumb mono fade-up" style="--d:.05s"><b>04</b>Progress</div>
@@ -33,7 +33,7 @@
     <div class="grid stats rv">
       <div class="stat"><div class="v" data-count="2">0</div><div class="k">domain packs running in the governed engine</div></div>
       <div class="stat"><div class="v"><span data-count="187">0</span><small>k</small></div><div class="k">indexed passages from 62 engineering sources, text and figures</div></div>
-      <div class="stat"><div class="v" data-count="3">0</div><div class="k">tiers of physics: fast models, coarse CFD, self-checked CFD</div></div>
+      <div class="stat"><div class="v" data-count="3">0</div><div class="k">engines in one loop: Yukti, Vega and Pramana</div></div>
       <div class="stat"><div class="v" data-count="1">0</div><div class="k">in-house design model, trained and now in evaluation</div></div>
     </div>
 </div></section>
@@ -41,7 +41,9 @@
 <div class="grid sh">
       <div class="sh-idx mono rv"><b>02</b>The record</div>
       <div class="sh-body"><h2 class="rv">Verified, and <span class="accent">not yet.</span></h2><p class="rv" style="--d:.1s">Including the numbers that are not flattering. A fast model that is wrong in a known direction is useful; one that is wrong in an unknown direction is dangerous.</p></div>
-    </div><table class="vtable rv"><thead><tr><th>Capability</th><th>Evidence</th><th>Status</th></tr></thead><tbody><tr><td>Governed engine</td><td>Contracts, deterministic rules, decision ledger, fast models, CFD gates and control room, built and tested.</td><td><span class="tag mono" style="color:var(--ok)">Verified</span></td></tr><tr><td>Heat-exchanger domain</td><td>Whole-part designs ran live, end to end, in the governed engine.</td><td><span class="tag mono" style="color:var(--ok)">Verified</span></td></tr><tr><td>Cold-plate domain</td><td>Built and tested; CFD-gated design rounds are running.</td><td><span class="tag mono" style="color:var(--ember)">In progress</span></td></tr><tr><td>Fast model against published data</td><td>Checked blind against a published microchannel benchmark: conservative, pressure drop over-predicted by 36–41% and thermal resistance by 16–21%, before calibration.</td><td><span class="tag mono" style="color:var(--ember)">In progress</span></td></tr><tr><td>First design meeting real limits</td><td>A cold plate meeting a real chip’s limits in self-checked CFD. Not achieved yet; this is the current milestone.</td><td><span class="tag mono" style="color:var(--mute)">Not yet</span></td></tr><tr><td>Own design model</td><td>Training runs complete; evaluation underway.</td><td><span class="tag mono" style="color:var(--ember)">In progress</span></td></tr><tr><td>Physical print and test</td><td>Planned once a design is verified virtually.</td><td><span class="tag mono" style="color:var(--mute)">Not yet</span></td></tr></tbody></table>
+    </div><table class="vtable rv"><thead><tr><th>Capability</th><th>Evidence</th><th>Status</th></tr></thead><tbody><tr><td>Governed loop</td><td>Contracts, deterministic rules, decision ledger, CFD gates and control room, built and tested.</td><td><span class="tag mono" style="color:var(--ok)">Verified</span></td></tr><tr><td>Heat-exchanger domain</td><td>Whole-part designs ran live, end to end, in the governed engine.</td><td><span class="tag mono" style="color:var(--ok)">Verified</span></td></tr><tr><td>Cold-plate domain</td><td>Built and tested; CFD-gated design rounds are running.</td><td><span class="tag mono" style="color:var(--ember)">In progress</span></td></tr><tr><td>Vega <span class="dev" lang="sa">(वेग)</span> · fast physics accuracy</td><td>Running inside the loop, but its error range is not established yet. Two published reference checks missed pressure drop in both directions: one over-predicted by 36–41%, another reached only 34–48% of the published value. Calibrating against matched CFD.</td><td><span class="tag mono" style="color:var(--ember)">In progress</span></td></tr><tr><td>Yukti <span class="dev" lang="sa">(युक्ति)</span> · design reasoning</td><td>Agent teams propose, defend and revise designs end to end in live runs (see the recorded run on the home page).</td><td><span class="tag mono" style="color:var(--ok)">Verified</span></td></tr>
+<tr><td>Pramana <span class="dev" lang="sa">(प्रमाण)</span> · CFD verification</td><td>Self-checked CFD runs on shortlisted designs. The 100× speed-up is a target, not yet measured.</td><td><span class="tag mono" style="color:var(--ember)">In progress</span></td></tr>
+<tr><td>First design meeting real limits</td><td>A cold plate meeting a real chip’s limits in self-checked CFD. Not achieved yet; this is the current milestone.</td><td><span class="tag mono" style="color:var(--mute)">Not yet</span></td></tr><tr><td>Own design model</td><td>Training runs complete; evaluation underway.</td><td><span class="tag mono" style="color:var(--ember)">In progress</span></td></tr><tr><td>Physical print and test</td><td>Planned once a design is verified virtually.</td><td><span class="tag mono" style="color:var(--mute)">Not yet</span></td></tr></tbody></table>
 </div></section>
 <section class="rule" id="roadmap"><div class="wrap">
 <div class="grid sh">
@@ -52,8 +54,10 @@
       <div class="tl-item done rv"><div class="mono">Done</div><h4>Governed engine</h4><p>Rules as code, ledger, verification tiers and control room.</p></div>
       <div class="tl-item done rv"><div class="mono">Done</div><h4>Two domain packs</h4><p>Printed heat exchangers and data-centre cold plates.</p></div>
       <div class="tl-item rv"><div class="mono">Now</div><h4>First verified design</h4><p>A cold plate that meets a real chip’s limits in self-checked CFD.</p></div>
+      <div class="tl-item rv"><div class="mono">Now</div><h4>Vega with a tested error range</h4><p>Calibrated on matched CFD so every prediction carries a measured error band.</p></div>
       <div class="tl-item todo rv"><div class="mono">Next</div><h4>Design partners</h4><p>Real parts and real requirements from teams building thermal hardware.</p></div>
-      <div class="tl-item todo rv"><div class="mono">Next</div><h4>Our own model in the loop</h4><p>A design model trained on verifiable rewards replaces general-purpose models.</p></div>
+      <div class="tl-item todo rv"><div class="mono">Next</div><h4>Pramana at 100×</h4><p>Detailed CFD on selected cold-plate cases, measured against our current solver.</p></div>
+      <div class="tl-item todo rv"><div class="mono">Next</div><h4>Our own model as Yukti</h4><p>A design model trained on verifiable rewards replaces general-purpose models.</p></div>
       <div class="tl-item todo rv"><div class="mono">Later</div><h4>Propulsion, then assemblies</h4><p>New domain packs on the same loop, rules and ledger.</p></div>
     </div></div>
 </div></section>

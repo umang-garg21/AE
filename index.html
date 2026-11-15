@@ -10,14 +10,14 @@
 <script>document.documentElement.classList.add("js");setTimeout(function(){document.documentElement.classList.add("ready")},80);setTimeout(function(){document.documentElement.classList.add("safe")},2500);</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="video" href="assets/hotfire.mp4" type="video/mp4">
-<link rel="stylesheet" href="assets/site.css?v=20261114145920">
+<link rel="stylesheet" href="assets/site.css?v=20261114173640">
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
 </head>
 <body data-page="home">
 <div id="site-nav"></div>
-<script src="assets/site.js?v=20261114145920"></script>
+<script src="assets/site.js?v=20261114173640"></script>
 
 <!-- ============ HERO ============ -->
 <header class="hero" id="top">
@@ -92,21 +92,40 @@
 <section class="rule" id="engine">
   <div class="wrap">
     <div class="grid sh">
-      <div class="sh-idx mono rv"><b>03</b>The engine</div>
+      <div class="sh-idx mono rv"><b>03</b>The engines</div>
       <div class="sh-body">
-        <h2 class="rv">From a requirement to a <span class="accent">verified part.</span></h2>
-        <p class="rv" style="--d:.1s">One loop runs every problem the engine takes on. It halts only when a decision genuinely belongs to a person.</p>
+        <h2 class="rv">Three engines. <span class="accent">One loop.</span></h2>
+        <p class="rv" style="--d:.1s">Yukti decides what to change. Vega predicts what the change will do. Pramana proves whether the design holds up. Every hand-off is checked by rules and written to a ledger.</p>
       </div>
     </div>
-    <div class="grid loop rv" id="loop">
-      <div class="step"><div class="n mono">01</div><h3>Define</h3><p>Requirements, limits and margins are fixed by rule before any design exists.</p></div>
-      <div class="step"><div class="n mono">02</div><h3>Architect</h3><p>Agent teams explore every viable family, grounded in handbooks and literature.</p></div>
-      <div class="step"><div class="n mono">03</div><h3>Generate</h3><p>Geometry is written as code: lattices, channels, manifolds, printable CAD.</p></div>
-      <div class="step"><div class="n mono">04</div><h3>Simulate</h3><p>Fast models screen. Self-checked CFD judges, at worst-case tolerance.</p></div>
-      <div class="step"><div class="n mono">05</div><h3>Decide</h3><p>Deterministic rules accept or reject. Every choice is written to a ledger.</p></div>
-      <div class="step"><div class="n mono">06</div><h3>Learn</h3><p>Outcomes become verifiable rewards for our own design model.</p></div>
+    <div class="grid engines">
+      <article class="eng rv" style="--d:0.0s">
+        <div class="eng-k mono"><span>01</span>Design Reasoning</div>
+        <h3 class="eng-name">Yukti <span class="dev" lang="sa">(युक्ति)</span></h3>
+        <div class="eng-mean mono">reasoning · strategy</div>
+        <p>Reads the chip brief, the pump and pressure limits and the shop’s rules. Proposes a CAD revision, says what it expects to improve, and decides what to change next when a check fails.</p>
+        <dl class="eng-io"><div><dt class="mono">In</dt><dd>Brief, limits, shop rules</dd></div><div><dt class="mono">Out</dt><dd>Design revisions, each with its reason</dd></div></dl>
+        <div class="eng-st mono"><i></i>Running</div>
+      </article>
+      <article class="eng rv" style="--d:0.1s">
+        <div class="eng-k mono"><span>02</span>Fast Physics</div>
+        <h3 class="eng-name">Vega <span class="dev" lang="sa">(वेग)</span></h3>
+        <div class="eng-mean mono">speed · momentum</div>
+        <p>Predicts temperature, pressure drop and flow for every candidate in seconds, ranks them, and flags any prediction too uncertain to act on.</p>
+        <dl class="eng-io"><div><dt class="mono">In</dt><dd>Candidate geometry</dd></div><div><dt class="mono">Out</dt><dd>Physics estimates with an error range</dd></div></dl>
+        <div class="eng-st mono"><i></i>Running · calibrating error ranges</div>
+      </article>
+      <article class="eng rv" style="--d:0.2s">
+        <div class="eng-k mono"><span>03</span>CFD Verification</div>
+        <h3 class="eng-name">Pramana <span class="dev" lang="sa">(प्रमाण)</span></h3>
+        <div class="eng-mean mono">valid proof</div>
+        <p>Runs detailed, self-checked CFD on the exact geometry of the shortlist, checking mesh and convergence, and returns evidence an engineer can sign off.</p>
+        <dl class="eng-io"><div><dt class="mono">In</dt><dd>Shortlisted CAD</dd></div><div><dt class="mono">Out</dt><dd>Verified thermal and flow results</dd></div></dl>
+        <div class="eng-st mono"><i></i>Running · targeting 100× faster CFD</div>
+      </article>
     </div>
-    <div class="more mono rv"><span>Verification tiers, the control room, and how the model learns</span><a href="technology.html">Explore the technology <span class="ar">→</span></a></div>
+    <div class="eflow mono rv"><span><b>Yukti</b> proposes</span><i>→</i><span><b>Vega</b> screens</span><i>→</i><span><b>Pramana</b> proves</span><i class="back">↩</i><span>verified results train Vega and guide Yukti</span></div>
+    <div class="more mono rv"><span>The full loop, verification tiers and the control room</span><a href="technology.html">Explore the technology <span class="ar">→</span></a></div>
   </div>
 </section>
 
@@ -143,10 +162,10 @@
       <div class="wrap">
         <div class="sh-idx mono"><b>05</b>Inside a design</div>
         <div class="ssteps">
-          <div class="sstep" data-i="0"><div class="mono">01 / Design</div><h3>Written as code, not drawn.</h3><p>A regeneratively cooled thrust chamber. Every channel, wall and manifold comes from rules the engine can check, so any variant is one parameter away.</p></div>
-          <div class="sstep" data-i="1"><div class="mono">02 / Parts</div><h3>Every part, chosen and justified.</h3><p>Agents pick the layout, the components and the alloy of each part, cite why, and log the decision.</p></div>
-          <div class="sstep" data-i="2"><div class="mono">03 / Physics</div><h3>Cut it open. Read the physics.</h3><p>Flow accelerates through the throat; the wall runs hottest there. Fast models screen thousands of variants, and self-checked CFD has the final word.</p></div>
-          <div class="sstep" data-i="3"><div class="mono">04 / Proof</div><h3>Then it has to survive.</h3><p>Only designs that hold every margin at worst-case tolerance move on to print and test. Physics decides.</p></div>
+          <div class="sstep" data-i="0"><div class="mono">01 / Design · Yukti <span class="dev" lang="sa">(युक्ति)</span></div><h3>Written as code, not drawn.</h3><p>A regeneratively cooled thrust chamber. Every channel, wall and manifold comes from rules the engine can check, so any variant is one parameter away.</p></div>
+          <div class="sstep" data-i="1"><div class="mono">02 / Parts · Yukti <span class="dev" lang="sa">(युक्ति)</span></div><h3>Every part, chosen and justified.</h3><p>Agents pick the layout, the components and the alloy of each part, cite why, and log the decision.</p></div>
+          <div class="sstep" data-i="2"><div class="mono">03 / Physics · Vega <span class="dev" lang="sa">(वेग)</span> → Pramana <span class="dev" lang="sa">(प्रमाण)</span></div><h3>Cut it open. Read the physics.</h3><p>Flow accelerates through the throat; the wall runs hottest there. Vega screens thousands of variants in seconds; Pramana’s self-checked CFD has the final word.</p></div>
+          <div class="sstep" data-i="3"><div class="mono">04 / Proof · Pramana <span class="dev" lang="sa">(प्रमाण)</span></div><h3>Then it has to survive.</h3><p>Only designs that hold every margin at worst-case tolerance move on to print and test. Physics decides.</p></div>
         </div>
         <div class="sfoot">
           <div class="sprog mono" id="sprog"><div><b></b>Design</div><div><b></b>Parts</div><div><b></b>Physics</div><div><b></b>Proof</div></div>
@@ -189,7 +208,7 @@
     <div class="grid stats rv">
       <div class="stat"><div class="v" data-count="2">0</div><div class="k">domain packs running in the governed engine</div></div>
       <div class="stat"><div class="v"><span data-count="187">0</span><small>k</small></div><div class="k">indexed passages from 62 engineering sources, text and figures</div></div>
-      <div class="stat"><div class="v" data-count="3">0</div><div class="k">tiers of physics: fast models, coarse CFD, self-checked CFD</div></div>
+      <div class="stat"><div class="v" data-count="3">0</div><div class="k">engines in one loop: Yukti, Vega and Pramana</div></div>
       <div class="stat"><div class="v" data-count="1">0</div><div class="k">in-house design model, trained and now in evaluation</div></div>
     </div>
     <div class="more mono rv"><span>Verified results, open questions and the roadmap</span><a href="progress.html">See full progress <span class="ar">→</span></a></div>
@@ -217,7 +236,7 @@
 
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script type="module">
-import { createEngineView } from './engine.js?v=20261114145920';
+import { createEngineView } from './engine.js?v=20261114173640';
 const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
 
 const { CONFIG: CFG } = window.Site;
