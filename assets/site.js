@@ -128,6 +128,16 @@
     });
   }
 
+
+  // Engine names type themselves in once, in sequence, when they scroll into view
+  function typeNames() {
+    const groups = new Map();
+    document.querySelectorAll('.nm').forEach(el => { el.style.setProperty('--n', el.textContent.trim().length); const g = el.parentElement; if (!groups.has(g)) groups.set(g, []); groups.get(g).push(el); });
+    const io = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; io.unobserve(e.target);
+      (groups.get(e.target) || []).forEach((el, k) => { el.style.setProperty('--d', (0.25 + k * 0.7) + 's'); el.classList.add('typed'); }); }), { threshold: .6 });
+    groups.forEach((_, g) => io.observe(g));
+  }
+
   /* ---------- boot after the page body exists ---------- */
   function boot() {
     shell();
@@ -155,6 +165,8 @@
     document.querySelectorAll('canvas[data-viz]').forEach(c => viz(c, c.dataset.viz));
     controlRoom();
     videos();
+    typeNames();
+    document.querySelectorAll('.nm').forEach(el => el.addEventListener('click', () => { document.querySelectorAll('.nm.open').forEach(o => o !== el && o.classList.remove('open')); el.classList.toggle('open'); }));
   }
   window.Site = { CONFIG, PAGES, page, fit, whileVisible, heat, rad, viz, DPR, reduce };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();

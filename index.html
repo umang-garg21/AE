@@ -12,12 +12,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="preload" as="video" href="assets/hotfire.mp4" type="video/mp4">
-<link rel="stylesheet" href="assets/site.css?v=20261114203107">
+<link rel="stylesheet" href="assets/site.css?v=20261116021313">
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
 </head>
 <body data-page="home">
 <div id="site-nav"></div>
-<script src="assets/site.js?v=20261114203107"></script>
+<script src="assets/site.js?v=20261116021313"></script>
 
 <!-- ============ HERO ============ -->
 <header class="hero" id="top">
@@ -95,7 +95,7 @@
       <div class="sh-idx mono rv"><b>03</b>The engines</div>
       <div class="sh-body">
         <h2 class="rv">Three engines. <span class="accent">One loop.</span></h2>
-        <p class="rv" style="--d:.1s"><span class="nm">Forge</span> designs what to change. <span class="nm">Spark</span> checks what the change will do, in seconds. <span class="nm">Anvil</span> tests the design in full CFD to prove it holds. Every hand-off is checked by rules and written to a ledger.</p>
+        <p class="rv" style="--d:.1s"><span class="nm nm-forge" data-role="Design reasoning" tabindex="0"><span class="nm-t">Forge</span></span> designs what to change. <span class="nm nm-spark" data-role="Fast physics" tabindex="0"><span class="nm-t">Spark</span></span> checks what the change will do, in seconds. <span class="nm nm-anvil" data-role="CFD verification" tabindex="0"><span class="nm-t">Anvil</span></span> tests the design in full CFD to prove it holds. Every hand-off is checked by rules and written to a ledger.</p>
       </div>
     </div>
     <div class="grid engines">
@@ -115,7 +115,7 @@
         <p>Proves the best designs in full simulation before anything is built.</p>
       </article>
     </div>
-    <div class="eflow mono rv"><span><span class="nm">Forge</span> designs</span><i>→</i><span><span class="nm">Spark</span> checks</span><i>→</i><span><span class="nm">Anvil</span> tests</span><i class="back">↩</i><span>tested results sharpen Spark and guide Forge</span></div>
+    <div class="eflow mono rv"><span><span class="nm nm-forge" data-role="Design reasoning" tabindex="0"><span class="nm-t">Forge</span></span> designs</span><i>→</i><span><span class="nm nm-spark" data-role="Fast physics" tabindex="0"><span class="nm-t">Spark</span></span> checks</span><i>→</i><span><span class="nm nm-anvil" data-role="CFD verification" tabindex="0"><span class="nm-t">Anvil</span></span> tests</span><i class="back">↩</i><span>tested results sharpen Spark and guide Forge</span></div>
     <div class="more mono rv"><span>The full loop, verification tiers and the control room</span><a href="technology.html">Explore the technology <span class="ar">→</span></a></div>
   </div>
 </section>
@@ -226,7 +226,7 @@
 
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script type="module">
-import { createEngineView } from './engine.js?v=20261114203107';
+import { createEngineView } from './engine.js?v=20261116021313';
 const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
 
 const { CONFIG: CFG } = window.Site;
